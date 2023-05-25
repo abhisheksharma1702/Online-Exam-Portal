@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/mass/Adding/Adding/Adding.iml" filepath="$PROJECT_DIR$/mass/Adding/Adding/Adding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/EXAMPORTALaPRIL.iml" filepath="$PROJECT_DIR$/.idea/EXAMPORTALaPRIL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExamMicroservice/ExamMicroservice/ExamMicroservice/ExamMicroservice.iml" filepath="$PROJECT_DIR$/ExamMicroservice/ExamMicroservice/ExamMicroservice/ExamMicroservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Truevaluate_apigateway (2)/Truevaluate_apigateway/Truevaluate_apigateway/Truevaluate_apigateway.iml" filepath="$PROJECT_DIR$/Truevaluate_apigateway (2)/Truevaluate_apigateway/Truevaluate_apigateway/Truevaluate_apigateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e_server (2)/e_server/e_server/e_server.iml" filepath="$PROJECT_DIR$/e_server (2)/e_server/e_server/e_server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/response (1)/response (1)/response/response/response.iml" filepath="$PROJECT_DIR$/response (1)/response (1)/response/response/response.iml" />
+      <module fileurl="file://$PROJECT_DIR$/userManager/userManager/userManager/userManager.iml" filepath="$PROJECT_DIR$/userManager/userManager/userManager/userManager.iml" />
+    </modules>
+  </component>
+</project>
