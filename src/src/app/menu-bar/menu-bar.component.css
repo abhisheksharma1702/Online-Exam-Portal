@@ -1,0 +1,58 @@
+  .topnav {
+    overflow: hidden;
+    background-color:black;
+  }
+
+  a{
+    color: black;
+  }
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .topnav a.active {
+    background-color: #103a89;
+    color: white;
+  }
+  .topnav a.right {
+    float:right;
+  }
+
+ .icon:hover{
+    color: rgb(168, 18, 18);
+
+  }
+
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: 
+  #0087ca;
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: 
+  #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+ 

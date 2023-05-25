@@ -1,0 +1,41 @@
+<!-- <p>report works!</p> -->
+
+
+<app-menu-bar></app-menu-bar>
+
+
+<div style="text-align: center; color: rgb(37, 27, 13);">
+  <p class="display-1">RESULTS</p>
+</div>
+<div class="bg">
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th class="display-4">User Id</th>
+      <th class="display-4">Course Name</th>
+      <th class="display-4">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let report of reports">
+      <td>{{userid}}</td>
+      <td *ngIf="report.course_id == 101">Java</td>
+      <td *ngIf="report.course_id == 102">Python</td>
+      <td *ngIf="report.course_id == 103">.Net</td>
+      <td *ngIf="report.course_id == 104">C</td>
+      <td *ngIf="report.course_id == 105">PHP</td>
+      <td *ngIf="report.course_id == 106">C++</td>
+      <td>{{ report.level_1 }}</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+<button
+           
+  class="button btn btn-lg btn-success ml-20"
+  routerLink="/exam_selection"
+  
+>
+Exam Section
+</button>

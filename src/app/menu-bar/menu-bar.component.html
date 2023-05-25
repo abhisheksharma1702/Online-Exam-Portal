@@ -1,0 +1,72 @@
+  
+  
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />          
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <div class="sticky-top topnav navbar-dark navbar ">
+    <a routerLink="" class="navbar-brand  " ><h5 class="hover-underline-animation">Home</h5></a>
+    <a routerLink="/admin_login" *ngIf="sessionUser==null && sessionAdmin==null" ><h5 class="hover-underline-animation">Admin Login</h5></a>
+    <a routerLink="/admin_dashboard" class="mr-auto" *ngIf="sessionUser==null && sessionAdmin!=null" ><h5 class="hover-underline-animation">Dashboard</h5></a>
+    <a routerLink="/userDashboard"  *ngIf="sessionUser!=null"><h5 class="hover-underline-animation">Dashboard</h5></a>
+    <a routerLink="/user_registration"   *ngIf="sessionAdmin==null && sessionUser==null"  > <h5 class="hover-underline-animation">Sign Up</h5></a>
+    <a routerLink="/aboutUs" class="mr-auto" *ngIf="sessionAdmin==null"><h5 class="hover-underline-animation">Help <i class="fa fa-question-circle"></i></h5></a>
+
+    <a routerLink="/chatbot" class='fa-solid fa-message' style='font-size:36px;'></a>
+    <a routerLink="/user_login"  *ngIf="sessionUser==null && sessionAdmin==null"><h5 class="hover-underline-animation">Sign In</h5></a>
+    <a routerLink="/profile"  *ngIf="sessionUser!=null"><i class="fa fa-user-circle-o" style="font-size:40px;color:rgba(217, 255, 0, 0.925)"></i></a>
+    <a routerLink="" (click)="logout()"  *ngIf="sessionUser!=null || sessionAdmin!=null" ><h5 class="hover-underline-animation">Logout</h5></a>
+    
+  </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <!--
+  <div class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="active " href="#" class="navbar-brand">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="aboutUs">About Us <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="admin_login" *ngIf="sessionUser==null && sessionAdmin==null">Admin <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="admin_dashboard" *ngIf="sessionUser==null && sessionAdmin!=null" >Admin<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="userDashboard" *ngIf="sessionUser!=null">User Dashboard <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="user_registration"  class="Left mr-auto" *ngIf="sessionAdmin==null" >Register<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="user_login" class="left" *ngIf="sessionUser==null && sessionAdmin==null">Login<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#" class="right" (click)="logout()"  *ngIf="sessionUser!=null || sessionAdmin!=null" >Logout<span class="sr-only">(current)</span></a>
+          </li>
+  
+  
+    </div>
+  </div> -->
+  
+  
+  
+  
+  
+  

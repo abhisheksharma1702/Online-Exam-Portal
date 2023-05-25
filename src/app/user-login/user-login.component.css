@@ -1,0 +1,20 @@
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: 500px;
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+
+.ml-20{
+    margin-left: 15%;
+    margin-top: 4%;
+}

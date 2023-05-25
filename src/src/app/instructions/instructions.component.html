@@ -1,0 +1,50 @@
+<!-- <p>instructions works!</p> -->
+
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Serial No</th>
+        <th scope="col">Instructions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Please Make sure you have good internet connection.</td>
+      </tr>
+  
+      <tr>
+        <th scope="row">2</th>
+        <td>Click the 'Submit' button to submit the exam.</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>The test will be auto submitted when the timer reaches to 00:00.</td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  <br />
+  <div>
+    <button type="submit" routerLink="/userDashboard" class="btn btn-danger">
+      Go Back
+    </button>
+  
+    <button
+      type="submit"
+      [routerLink]="'/exam_ui/' + courseid + '/' + levelid"
+      class="btn btn-success"
+    >
+      Start the test
+    </button>
+  </div>
+  <br />
+  <br />
+  <!-- <div class="insimg">
+      <img  src="assets\images\best-of-luck.jpg" style="width: 400px">
+      </div> -->
+  <div class="text-center">
+    <h2>Best Of Luck</h2>
+  </div>
+  

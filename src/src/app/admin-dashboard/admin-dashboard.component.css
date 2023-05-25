@@ -1,0 +1,30 @@
+.button {    
+    background-color: #105989; 
+    color:white; 
+    /*border: 2px solid black;*/
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;   
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    align-items: center;
+  }
+    
+  .button:hover {
+    background-color: rgb(41, 41, 165);
+    color: white;
+  }
+  
+  #grad1 {
+  height:666px;
+  background-image: linear-gradient(#4d94ff, #99c2ff,#b3d1ff);
+}
+
+.bg{
+  background-image: url('../../assets/images/9.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

@@ -1,0 +1,16 @@
+#parent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 92vh;
+    background: #F5FFFA;
+  }
+  #child{
+    position: relative;
+    padding: 2rem;
+    color: black;
+    border-radius: 5px;
+  }
+  

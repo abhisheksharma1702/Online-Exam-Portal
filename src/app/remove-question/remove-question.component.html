@@ -1,0 +1,93 @@
+
+<app-menu-bar></app-menu-bar>
+
+<div class="bg">
+    <div class="row">
+      <div class="col-7">
+        <img src="assets\images\8.png">
+      </div>
+            <div class="col-4">
+              <div class="card-body p-5">
+                <h2 class="text-uppercase text-center mb-5">Remove Question</h2>
+
+                <form>
+                  <div class="form-group">
+                    <div class="form-outline mb-4">
+                      <select class="form-control" id="exampleFormControlSelect1" name="course_id" [(ngModel)]="course_id" (ngModelChange)="searchQuestion()">
+                        <option value="undefined" disabled selected>Select the course</option>
+                        <option value="101">Java</option>
+                        <option value="102">Python</option>
+                        <option value="103">.Net</option>
+                        <option value="104">C</option>
+                        <option value="105">Php</option>
+                        <option value="106">C++</option>
+                      </select>
+                    </div>
+
+
+
+
+
+                    <div class="form-outline mb-4">
+                      <select class="form-control" id="exampleFormControlSelect1" name="level_id" [(ngModel)]="level_id" (ngModelChange)="searchQuestion()">
+                        <option value="undefined" disabled selected>Select Question Level</option>
+                        <option value="1">1</option> 
+                        <option value="2">2</option> 
+                        <option value="3">3</option> 
+                      </select>
+                    </div>
+
+                    <div >
+                      <table class="table" *ngIf="question_list != null">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">Question ID</th>
+                            <th scope="col">Question</th>
+                            <th scope="col">Remove Question</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let item of question_list">
+                            <td>{{item.question_id}}</td>
+                            <td>{{item.question}}</td>
+                            <td><button type="submit" class="btn btn-primary" (click)="removingQuestion(item.question_id)">Remove</button></td>
+                          </tr>
+                          <tr *ngIf="question_list.length==0">
+                              <td colspan="3">
+                                No Question Available
+                              </td>
+                            </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+
+
+                    <div class="d-flex justify-content-center">
+                      <button
+                        type="submit"
+                        class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
+                        routerLink="/add_question"
+                      >Add Questions
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

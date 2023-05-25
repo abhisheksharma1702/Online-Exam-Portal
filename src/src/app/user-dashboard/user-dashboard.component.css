@@ -1,0 +1,68 @@
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .card-up {
+    height: 120px;
+    overflow: hidden;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+  }
+
+  .aqua-gradient {
+    background: #F5D6E5;
+    /* background: rgba(242,255,251,1) 0.1%; */
+    /* background: linear-gradient(40deg, #2096ff, #05ffa3) !important; */
+  }
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  .topnav a.right {
+    float:right;
+  }
+  .button {
+    background-color: #103a89;
+    color:white;
+    /*border: 2px solid black;*/
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    align-items: center;
+  }
+
+  .button:hover {
+    background-color: gray;
+    color: white;
+  }
+
+   #grad1 {
+    height: 666px;
+    background-image: linear-gradient(#4d94ff, #99c2ff,#b3d1ff);
+  }
+
+  .bg{
+    background-image: url('../../assets/images/1.avif');
+    background-repeat: no-repeat;
+    background-size: 112%;
+  }
