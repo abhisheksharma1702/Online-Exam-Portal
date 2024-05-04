@@ -1,0 +1,87 @@
+<!-- <p>examcom works!</p> -->
+
+<app-menu-bar></app-menu-bar>
+
+<div id="parent">
+  <div class="bootstrap-wrapper container m-auto" id="child">
+    <form style="margin: auto">
+      <h1 class="display-1">Schedule Exam</h1>
+      <div class="col">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">Name</span>
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            id="basic-url"
+            name="username"
+            aria-describedby="basic-addon3"
+            [(ngModel)]="exam.username"
+          />
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">Email</span>
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            id="basic-url"
+            name="useremail"
+            aria-describedby="basic-addon3"
+            [(ngModel)]="exam.useremail"
+          />
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3"
+              >Choose Exam Date and Time:</span
+            >
+          </div>
+          <input
+            type="datetime-local"
+            class="form-control"
+            id="basic-url"
+            name="examtime"
+            aria-describedby="basic-addon3"
+            [(ngModel)]="exam.examtime"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3"
+              >Choose the Level Of Questions:</span
+            >
+          </div>
+          <select  aria-describedby="basic-addon3" type="text"  id="basic-url" name="levelid" id="levelid" [(ngModel)]="levelid" class="form-control">
+            <option value="1">Beginner</option>
+            <option value="2">Proficient</option>
+            <option value="3">Expert</option>
+          </select>
+          </div>
+          <!-- <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon3">Choose the number of questions to attend</span>
+            </div>
+            <input
+              type="number"
+              class="form-control"
+              id="basic-url"
+              name = "questionsize"
+              aria-describedby="questionsize"
+              [(ngModel)]="questionsize"
+            />
+          </div> -->
+        <div>
+          <button (click)="fun1()" class="btn btn-dark btn-lg">Book slot</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+

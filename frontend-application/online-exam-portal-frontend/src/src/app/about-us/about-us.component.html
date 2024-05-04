@@ -1,0 +1,64 @@
+
+<div class="c1">
+<app-menu-bar></app-menu-bar>
+
+  <div class="container">
+    <div class="row">
+    <div class="col-6 container-fluid h-custom">
+          <img
+            src="assets\images\A.jpg"
+            class="img-fluid"
+            alt="Sample image"
+          />
+    </div>  
+    <div class="col-1">
+      
+    </div>
+    <div class="col-5 card">
+      <div class="left">
+        <img src="">
+      </div>
+      
+      <div class="right">
+        <h2>Contact Us</h2>
+        <div class="contact">
+          <div class="form-container">
+            
+            <form class="form" >
+              
+              <div class="username">
+                <input type="text" placeholder="Enter your Name" [(ngModel)]="contact.full_name" name="full_name">
+              </div>
+              <div class="useremail">
+                <input type="email" placeholder="Enter your email" [(ngModel)]="contact.email" name="email" required>
+              </div>
+              <div class="usermessage">
+                <textarea placeholder="Enter your message" [(ngModel)]="contact.message" name="message" required></textarea>
+              </div>
+              <div class="usersubmit">
+                <input type="submit" value="Contact Us" (click)="contactSupport()">
+              </div>
+            </form>
+          </div>
+          <div class="address">
+            <div class="email">
+              <h4>Contact</h4>
+              <p>onlineexamportal@gmail.com</p>
+            </div>
+            <div class="location">
+              <h4>Based in</h4>
+              <p>Pune,<br>Maharashtra</p>
+            </div>
+            <!-- <div class="social">
+              <span><a href="#"><i class="fab fa-facebook"></i></a></span>
+              <span><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></span>
+              <span><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></span>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<!-- <router-outlet></router-outlet> -->

@@ -1,0 +1,96 @@
+<!-- <p>user-login works!</p> -->
+
+
+<app-menu-bar></app-menu-bar>
+
+
+<section class="">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-8 col-lg-5 col-xl-4">
+        <img
+          src="assets\images\proctor.webp"
+          class="img-fluid"
+          alt="Sample image"
+        />
+      </div>
+      <div class="col-md-8 col-lg-5 col-xl-4 offset-xl-1">
+        <h1 class="display-3 p-3" style="text-align: left">User Login</h1>
+        <form [formGroup]="form1" (ngSubmit)="formSubmit()">
+          <div class="form-group">
+            <div class="from-outline mb-4">
+              <input
+                type="email"
+                name="email"
+                id="form3Example3"
+                [(ngModel)]="login.email"
+                [(ngModel)]="loginData.username"
+                class="form-control form-control-lg"
+                formControlName="email"
+                placeholder="Enter a valid email address"
+              />
+            </div>
+            <div
+              *ngIf="
+                form1.get('email').hasError('required') &&
+                form1.get('email').touched &&
+                form1.get('email').pristine
+              "
+              class="alert alert-danger"
+            >
+              Please Enter email
+            </div>
+            <div
+              *ngIf="form1.get('email').invalid && form1.get('email').dirty"
+              class="alert alert-danger"
+            >
+              Please Enter Correct Email Address
+            </div>
+
+            <div class="form-outline mb-3">
+              <input
+                type="password"
+                name="password"
+                id="form3Example4"
+                class="form-control form-control-lg"
+                [(ngModel)]="login.password"
+                [(ngModel)]="loginData.password"
+                placeholder="Enter password"
+                formControlName="password"
+              />
+            </div>
+            <div *ngIf="form1.get('password').touched">
+              <div
+                *ngIf="form1.get('password').hasError('required')"
+                class="alert alert-danger"
+              >
+                Please Enter password
+              </div>
+              <div
+                *ngIf="
+                  form1.get('password').invalid && form1.get('password').dirty
+                "
+                class="alert alert-danger"
+              >
+                Please enter a password containing alphanumeric characters as
+                well as special character
+              </div>
+            </div>
+          </div>
+
+          <div class="form-outline mb-3 d-flex">
+            <button
+              type="submit"
+              class="button btn btn-lg btn-primary"
+              [disabled]="!form1.valid"
+            >
+              Login
+            </button>
+            <a class="ml-20" routerLink="/user_registration"><h5 class="hover-underline-animation">Create new account!</h5></a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<router-outlet></router-outlet>

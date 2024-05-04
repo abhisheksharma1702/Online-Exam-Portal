@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<img id="backgroundimg" src="../../assets/images/16.png">
+<div class="main">
+  <div class="header">
+    <i style="cursor:pointer;display:flex;float:right;" class="fas fa-arrow-left" routerLink="/aboutUs">&nbsp;&nbsp;Help</i>
+    <div class="center">
+      <div>
+        <img class="pfp" src="../../assets/images/22.jpg">
+        <p id="pfpname">Chatbot</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div style="padding:11px;">
+      <p>{{logic()}}</p>
+      <div  *ngFor="let message of messages"  class="msg-btn-holder">
+        <div class="sender-msg msg-btn" *ngIf="message.charAt(0)=='u'">
+            <p>{{ message }}</p>
+        </div>
+        <div *ngIf="message.charAt(0)=='S'">
+            <div class="receiver-msg msg-btn">
+                <p>{{message}}</p>
+            </div>
+            <br>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div style="width:100%;padding:11px;">
+        <input [(ngModel)]="userInput" class="text-box" (keyup.enter)="sendMessage()" placeholder="Type Your Query Here" />
+    </div>
+  </div>
+
+</div>
+  

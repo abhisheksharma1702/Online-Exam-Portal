@@ -1,0 +1,272 @@
+
+
+
+ <app-menu-bar></app-menu-bar>
+<body>
+<div class="container">
+  <div class="content">
+     <img src="assets\images\images.png" />
+          <h1 class="form-title">Register Here</h1>
+                        <form [formGroup]="regform" (ngSubmit)="registerUser()">
+                          <div class="form-group">
+                            <div class="form-outline mb-4">
+                              <input
+                                
+                                type="text"
+                                name="email"
+                                [(ngModel)]="register.email"
+                                class="form-control form-control-lg"
+                                formControlName="email"
+                                id="email"
+                                placeholder="Enter your Email Address"
+                              />
+                            </div>
+                            <div *ngIf="regform.get('email').touched">
+                              <div
+                                *ngIf="regform.get('email').hasError('required')"
+                                class="alert alert-danger"
+                              >
+                                Please Enter email
+                              </div>
+                              <div
+                                *ngIf="regform.get('email').invalid"
+                                class="alert alert-danger"
+                              >
+                                Please Enter Correct Email Address
+                              </div>
+                            </div>
+          
+                            <div class="form-outline mb-4">
+                              <input
+                                type="password"
+                                name="password"
+                                [(ngModel)]="register.password"
+                                class="form-control form-control-lg"
+                                formControlName="password"
+                                placeholder="Enter Password"
+                              />
+                            </div>
+                            <div *ngIf="regform.get('password').touched">
+                              <div
+                                *ngIf="regform.get('password').hasError('required')"
+                                class="alert alert-danger"
+                              >
+                                Please Enter password
+                              </div>
+                              <div
+                                *ngIf="
+                                  regform.get('password').invalid &&
+                                  regform.get('password').dirty
+                                "
+                                class="alert alert-danger"
+                              >
+                                Please enter a password containing alphanumeric characters
+                                as well as special character
+                              </div>
+                            </div>
+          
+                            <div class="form-outline mb-4">
+                              <input
+                                type="text"
+                                name="fullName"
+                                [(ngModel)]="register.full_name"
+                                class="form-control form-control-lg"
+                                formControlName="fullName"
+                                id="form3Example4cdg"
+                                placeholder="Enter your Name"
+                              />
+                            </div>
+                            <div *ngIf="regform.get('fullName').touched">
+                              <div
+                                *ngIf="regform.get('fullName').hasError('required')"
+                                class="alert alert-danger"
+                              >
+                                Please Enter Full Name
+                              </div>
+                            </div>
+          
+                            <div class="form-outline mb-4">
+                              <input
+                                type="number"
+                                name="mobile"
+                                [(ngModel)]="register.mobile"
+                                class="form-control form-control-lg"
+                                formControlName="mobile"
+                                placeholder="Enter your Mobile number"
+                              />
+                            </div>
+                            <div *ngIf="regform.get('mobile').touched">
+                              <div
+                                *ngIf="regform.get('mobile').hasError('required')"
+                                class="alert alert-danger"
+                              >
+                                Please Enter mobile number
+                              </div>
+                              <div
+                                *ngIf="regform.get('mobile').invalid"
+                                class="alert alert-danger"
+                              >
+                                Please Enter valid mobile number
+                              </div>
+                            </div>
+          
+                            <div class="form-outline mb-4">
+                              <select required
+                                class="form-control form-select form-control-lg"
+                                name="state"
+                                [(ngModel)]="register.state"
+                                formControlName="state"
+                              >
+                                <option value="undefined" disabled selected>Select your State</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Andaman and Nicobar Islands">
+                                  Andaman and Nicobar Islands
+                                </option>
+                                <option value="Arunachal Pradesh">
+                                  Arunachal Pradesh
+                                </option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Dadar and Nagar Haveli">
+                                  Dadar and Nagar Haveli
+                                </option>
+                                <option value="Daman and Diu">Daman and Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Lakshadweep">Lakshadweep</option>
+                                <option value="Puducherry">Puducherry</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jammu and Kashmir">
+                                  Jammu and Kashmir
+                                </option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                                <div *ngIf="regform.get('state').touched">
+                                  <div
+                                    *ngIf="regform.get('state').hasError('required')"
+                                    class="alert alert-danger"
+                                  >
+                                    Please Enter State
+                                  </div>
+                                </div>
+                              </select>
+                            </div>
+                            <div class="form-outline mb-4">
+                              <input
+                                type="text"
+                                name="city"
+                                [(ngModel)]="register.city"
+                                class="form-control form-control-lg"
+                                formControlName="city"
+                                placeholder="Enter your City"
+                              />
+                            </div>
+                            <div *ngIf="regform.get('city').touched">
+                              <div
+                                *ngIf="regform.get('city').hasError('required')"
+                                class="alert alert-danger"
+                              >
+                                Please Enter city
+                              </div>
+                            </div>
+          
+                            <div class="form-outline mb-4">
+                              <input
+                                type="text"
+                                onfocus="(this.type='date')"
+                                onblur="(this.type='text')"
+                                value="Dob"
+                                name="date_of_birth"
+                                [(ngModel)]="register.date_of_birth"
+                                class="form-control form-control-lg"
+                                formControlName="date_of_birth"
+                                placeholder="Enter Date of Birth"
+                              />
+                            </div>
+                            <div *ngIf="regform.get('date_of_birth').touched">
+                              <div
+                                *ngIf="regform.get('dob').hasError('required')"
+                                class="alert alert-danger"
+                              >
+                                Please Enter DOB
+                              </div>
+                            </div>
+          
+                            <div class="form-outline mb-4">
+                              <input
+                                type="text"
+                                name="qualification"
+                                [(ngModel)]="register.qualification"
+                                class="form-control form-control-lg"
+                                formControlName="qualification"
+                                id="form3Example1cg"
+                                placeholder="Enter your Qualification"
+                              />
+                            </div>
+                            <div *ngIf="regform.get('qualification').touched">
+                              <div
+                                *ngIf="regform.get('qualification').hasError('required')"
+                                class="alert alert-danger"
+                              >
+                                Please Enter Qualification
+                              </div>
+                            </div>
+          
+                            <div class="form-outline mb-4">
+                              <input
+                                type="number"
+                                name="year_of_completion"
+                                [(ngModel)]="register.year_of_completion"
+                                class="form-control form-control-lg"
+                                formControlName="year_of_completion"
+                                placeholder="Enter your year of completion"
+                              />
+                            </div>
+                            <div *ngIf="regform.get('year_of_completion').touched">
+                              <div
+                                *ngIf="
+                                  regform.get('year_of_completion').hasError('required')
+                                "
+                                class="alert alert-danger"
+                              >
+                                Please Enter Year of Completion
+                              </div>
+                            </div>
+          
+                            <div class="d-flex justify-content-center">
+                              <button
+                                type="submit"
+                                class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
+                              >
+                                Register
+                              </button>
+                              <a class="ml-20" routerLink="/user_login"><h5 class="hover-underline-animation">Already Have an account!</h5></a>
+                            </div>
+                          </div>
+  </form>
+  </div></div></body>
+
+<router-outlet></router-outlet>
+
+

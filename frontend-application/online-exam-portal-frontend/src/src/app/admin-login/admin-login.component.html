@@ -1,0 +1,127 @@
+<!-- <p>admin-login works!</p> -->
+
+<app-menu-bar></app-menu-bar>
+<!-- <header id="grad1">
+    <br> <br>
+
+<form   [formGroup]="form2" (ngSubmit)="loginCheck()" style="width: 500px; margin: auto;">
+
+    <div class="square">
+
+    <div class="content">
+       <img class="logo"src="assets\images\download (1).jfif">
+       <p><b>ADMIN LOGIN</b></p>
+    <div class="form-group">
+
+        Enter email : <input type="text" name="email" [(ngModel)]="adminlogin.email" class="form-control" formControlName="email" >
+
+            <div *ngIf="form2.get('email').hasError('required') && form2.get('email').touched && form2.get('email').pristine" class="alert alert-danger" >
+                Please Enter email
+            </div>
+            <div *ngIf="form2.get('email').invalid && form2.get('email').dirty" class="alert alert-danger">
+                Please Enter Correct Email Address
+            </div>
+
+        Enter password : <input type="password" name="password" [(ngModel)]="adminlogin.password" class="form-control" formControlName="password" >
+        <div *ngIf="form2.get('password').touched">
+            <div *ngIf="form2.get('password').hasError('required')" class="alert alert-danger">
+                Please Enter password
+            </div>
+            <div *ngIf="form2.get('password').invalid && form2.get('password').dirty" class="alert alert-danger">
+                Please enter a password containing alphanumeric characters as well as special character
+            </div>
+        </div>
+    </div>
+        <button type="submit" class="button"  [disabled]="!form2.valid">Login</button>
+    </div>
+    </div>
+</form>
+<router-outlet></router-outlet> -->
+
+<section class="">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-8 col-lg-5 col-xl-4">
+        <img
+        src="assets\images\proctor.jpeg"
+        class="img-fluid"
+          alt="Sample image"
+        />
+      </div>
+      <div class="col-md-8 col-lg-5 col-xl-4 offset-xl-1">
+        <h1 class="display-3 p-3" style="text-align: left">Admin Login</h1>
+        <form [formGroup]="form2" (ngSubmit)="loginCheck()">
+          <div class="form-group">
+            <div class="from-outline mb-4">
+              <input
+                type="email"
+                name="email"
+                id="form3Example3"
+                [(ngModel)]="adminlogin.email"
+                class="form-control form-control-lg"
+                formControlName="email"
+                placeholder="Enter a valid email address"
+              />
+            </div>
+            <div
+              *ngIf="
+                form2.get('email').hasError('required') &&
+                form2.get('email').touched &&
+                form2.get('email').pristine
+              "
+              class="alert alert-danger"
+            >
+              Please Enter email
+            </div>
+            <div
+              *ngIf="form2.get('email').invalid && form2.get('email').dirty"
+              class="alert alert-danger"
+            >
+              Please Enter Correct Email Address
+            </div>
+
+            <div class="form-outline mb-3">
+              <input
+                type="password"
+                name="password"
+                id="form3Example4"
+                class="form-control form-control-lg"
+                [(ngModel)]="adminlogin.password"
+                placeholder="Enter password"
+                formControlName="password"
+              />
+            </div>
+            <div *ngIf="form2.get('password').touched">
+              <div
+                *ngIf="form2.get('password').hasError('required')"
+                class="alert alert-danger"
+              >
+                Please Enter password
+              </div>
+              <div
+                *ngIf="
+                  form2.get('password').invalid && form2.get('password').dirty
+                "
+                class="alert alert-danger"
+              >
+                Please enter a password containing alphanumeric characters as
+                well as special character
+              </div>
+            </div>
+          </div>
+
+          <div class="form-outline mb-3">
+            <button
+              type="submit"
+              class="button btn btn-lg btn-primary"
+              [disabled]="!form2.valid"
+            >
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<router-outlet></router-outlet>
