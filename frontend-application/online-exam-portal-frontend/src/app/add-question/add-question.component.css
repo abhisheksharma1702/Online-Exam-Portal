@@ -1,0 +1,49 @@
+.btn1{
+  background-color: rgb(4, 228, 160);
+}
+
+.btn2{
+  background-color: rgb(19, 27, 25);
+}
+
+/* .button {    
+    background-color: #103a89; 
+    color:white; 
+    
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;   
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    align-items: center;
+  } */
+    
+  .button:hover {
+    background-color: gray;
+    color: white;
+  }
+  .addimg{
+    width:1530px !important;
+  height: 650px;
+  }
+  .add
+{
+  position: absolute;
+  top:10%;
+  left:35%;
+  font-size: 10px !important;
+  
+
+}
+.mt20{
+  margin-top: 20%;
+}
+
+img{
+  margin-top: 20%;
+}
+
+

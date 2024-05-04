@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body class="bg">
+  <div class="container">
+      <div class="content">
+          <div class="square twitch" style="margin-bottom: 50px;">
+              <span class="one" ></span>
+              <span class="two"></span>
+              <span class="three"></span>
+              <div class="circle">
+                  <h2 class="DrugRadar"> Exam Portal
+                  </h2>
+                  <br>
+                  <p><b> Welcome to Online Assessment Platform to test your knowledge on various Languages.</b></p>
+              </div>
+          </div>
+
+          <a *ngIf="sessionUser==null && sessionAdmin==null" routerLink="/user_login" class="button" target="_parent">
+                  <span class="actual-text">&nbsp;Let's&nbsp;Begin!!&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;Let's&nbsp;Begin!!&nbsp;</span>
+          </a>
+          <a *ngIf="sessionUser!=null" routerLink="/userDashboard" class="button" target="_parent">
+            <span class="actual-text">&nbsp;Dashboard!&nbsp;</span>
+            <span class="hover-text" aria-hidden="true">&nbsp;Dashboard!&nbsp;</span>
+    </a>
+    <a *ngIf="sessionAdmin!=null" routerLink="/admin_dashboard" class="button" target="_parent">
+      <span class="actual-text">&nbsp;Dashboard!&nbsp;</span>
+      <span class="hover-text" aria-hidden="true">&nbsp;Dashboard!&nbsp;</span>
+</a>
+      </div>
+  </div>
+
+
+  <footer> <small>Copyright © 2023 Online Exam Portal. All Rights Reserved.</small></footer>

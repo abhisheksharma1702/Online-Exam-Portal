@@ -1,0 +1,25 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  div {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .insimg
+  {
+    width:500px !important;
+  height: 500px;
+  left: 53%;
+  top:80%
+  }
+  
+   #grad1 {
+    height: 730px;
+    background-image: linear-gradient(#4d94ff, #99c2ff,#b3d1ff);
+  }
